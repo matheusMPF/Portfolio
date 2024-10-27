@@ -5,7 +5,7 @@ DataExperience.reverse();
 
 export const Experience = () => {
   return (
-    <section className="flex h-full w-full justify-around items-center flex-wrap">
+    <section className="flex h-full w-full justify-around items-center flex-wrap overflow-y-auto">
       {DataExperience.map((data, key) => {
         return (
           <CardLg

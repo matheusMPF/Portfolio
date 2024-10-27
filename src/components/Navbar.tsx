@@ -8,7 +8,7 @@ interface PropsNavbar {
 
 export const Navbar = ({ setPage }: PropsNavbar) => {
   return (
-    <nav className="flex justify-between items-center px-8 py-4 shadow-md fixed h-[12%] w-full bg-zinc-100 top-0 z-10">
+    <nav className="flex justify-between items-center px-8 py-4 shadow-md h-[12%] w-full bg-zinc-100">
       <h1 className="text-2xl">M.Magalhães</h1>
       <ul className="flex gap-4 items-center justify-center">
         {navLinks.map((link, key) => (

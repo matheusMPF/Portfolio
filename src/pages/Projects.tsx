@@ -3,7 +3,7 @@ import { DataProjects } from "@/data/DataProjects";
 
 export const Projects = () => {
   return (
-    <section className="flex h-full w-full flex-col justify-around items-center">
+    <section className="flex h-full w-full flex-col items-center overflow-y-auto">
       {DataProjects.map((data, index) => {
         return (
           <CardLg

@@ -3,7 +3,7 @@ import { DataSkill } from "@/data/DataSkill";
 
 export const Skills = () => {
   return (
-    <section className="flex h-full w-full flex-wrap gap-4 justify-center items-center overflow-y-auto">
+    <section className="flex h-[90%] w-full flex-wrap gap-4 justify-center items-center overflow-y-auto">
       {DataSkill.map((data, key) => {
         return (
           <CardSm

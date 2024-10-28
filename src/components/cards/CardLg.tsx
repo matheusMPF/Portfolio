@@ -18,27 +18,27 @@ export const CardLg = (props: CardType) => {
 
   return (
     <div
-      className={`shadow-md max-w-[80%] h-56 bg-zinc-300/10 rounded-md flex items-center gap-4 mt-4 mb-4 p-3 max-sm:w-full max-md:w-full`}
+      className={`shadow-md w-[80%] h-56 bg-zinc-300/10 rounded-md flex items-center gap-4 mt-4 mb-4 p-3 max-md:w-[90%]`}
     >
-      <Image src={iconSrc} alt={title} width={180} className="rounded-md" />
+      <Image
+        src={iconSrc}
+        alt={title}
+        width={180}
+        className="rounded-md max-md:hidden"
+      />
 
       <div className="flex flex-col gap-2">
         <div className="flex justify-between">
           <h2 className="font-bold tracking-wider text-xl">{title}</h2>
           {subTitle ? (
-            <span className="text-sm opacity-70">{period}</span>
+            <span className="text-sm opacity-70 w-24 h-8">{period}</span>
           ) : (
             <a
               href={srcGithub}
               target="_blank"
               className="transition-all hover:scale-105"
             >
-              <Image
-                alt={title}
-                src={iconGithub}
-                width={30}
-                className="md:hidden"
-              />
+              <Image alt={title} src={iconGithub} width={30} />
             </a>
           )}
         </div>
@@ -48,7 +48,7 @@ export const CardLg = (props: CardType) => {
         )}
 
         <div className={`flex justify-between w-11/12`}>
-          <p className="w-[95%] max-h-24 opacity-80 tracking-wide overflow-y-auto text-sm">
+          <p className="w-[95%] max-h-24 overflow-y-auto opacity-80 tracking-wide text-sm max-md:w-full">
             {description}
           </p>
         </div>

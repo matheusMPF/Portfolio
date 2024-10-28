@@ -31,7 +31,7 @@ export const ButtonSm = (props: PropsButtonSm) => {
 
   return (
     <button
-      className={`bg-zinc-200 text-sm text-zinc-900/80 rounded-lg py-2 px-4 transition- transition-all duration-500 hover:text-zinc-100 hover:bg-purple-700 hover:shadow-[0_0_1px_#7e22ce,0_0_2px_#7e22ce,0_0_20px_#7e22ce] flex items-center justify-center gap-1`}
+      className={`bg-zinc-200 text-sm text-zinc-900/80 rounded-lg py-1 px-4 transition- transition-all duration-500 hover:text-zinc-100 hover:bg-purple-700 hover:shadow-[0_0_1px_#7e22ce,0_0_2px_#7e22ce,0_0_20px_#7e22ce] flex items-center justify-center gap-1 max-md:bg-purple-700 max-md:text-zinc-100`}
     >
       {startIcon}
       {name}

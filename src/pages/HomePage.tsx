@@ -7,8 +7,8 @@ const linkedin = "https://www.linkedin.com/in/matheus-magalhães-311560277/";
 
 export const HomePage = () => {
   return (
-    <section className="flex justify-around items-center h-5/6">
-      <div className="w-1/2 flex flex-col gap-4">
+    <section className="w-full flex justify-around items-center h-[90%] max-md:flex-col">
+      <div className="w-1/2 flex flex-col gap-4 max-md:w-[90%]">
         <div>
           <h1 className="text-5xl">Olá! Sou Matheus Magalhães</h1>
           <span className="text-5xl text-purple-700 animate-pulse">
@@ -36,7 +36,7 @@ export const HomePage = () => {
           src={Myimg}
           width={300}
           alt="Matheus Magalhães"
-          className="rounded-md"
+          className="rounded-md max-md:hidden"
         />
       </div>
     </section>

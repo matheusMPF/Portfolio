@@ -14,7 +14,7 @@ export const CardSm = (props: CardType) => {
 
   return (
     <div
-      className={`shadow-md w-[45%] h-2/5 bg-zinc-300/10 rounded-md flex items-center gap-4 mt-8 p-3 max-sm:w-[90%] max-md:w-[90%]`}
+      className={`shadow-md w-[45%] h-2/5 bg-zinc-300/10 rounded-md flex items-center gap-4 mt-8 p-3 max-sm:w-[90%]`}
     >
       <Image src={iconSrc} alt={title} width={50} className="rounded-md" />
       <div className="flex flex-col gap-3 w-full h-full justify-around">

@@ -27,7 +27,7 @@ export const CardLg = (props: CardType) => {
         className="rounded-md max-md:hidden"
       />
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-4">
         <div className="flex justify-between">
           <h2 className="font-bold tracking-wider text-xl">{title}</h2>
           {subTitle ? (

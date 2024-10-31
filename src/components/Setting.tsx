@@ -27,19 +27,31 @@ const style = {
   gap: "1rem",
 };
 
-export const Settings = () => {
+interface PropsSettings {
+  isMenuHamburger: boolean;
+}
+
+export const Settings = (props: PropsSettings) => {
+  const { isMenuHamburger } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  console.log(isMenuHamburger);
+
   return (
     <div>
-      <Setting2
-        onClick={handleOpen}
-        size="32"
-        variant="Bulk"
-        className="text-zinc-400 cursor-pointer hover:text-purple-700 transition-all duration-[0.3s]"
-      />
+      {isMenuHamburger ? (
+        <span onClick={handleOpen}>Configurações</span>
+      ) : (
+        <Setting2
+          onClick={handleOpen}
+          size="32"
+          variant="Bulk"
+          className="text-zinc-400 cursor-pointer hover:text-purple-700 transition-all duration-[0.3s]"
+        />
+      )}
+
       <Modal
         open={open}
         onClose={handleClose}

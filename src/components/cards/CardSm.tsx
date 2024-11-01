@@ -16,11 +16,19 @@ export const CardSm = (props: CardType) => {
     <div
       className={`shadow-md w-[45%] h-2/5 bg-zinc-300/10 rounded-md flex items-center gap-4 mt-8 p-3 max-sm:w-[90%]`}
     >
-      <Image src={iconSrc} alt={title} width={50} className="rounded-md" />
+      <Image
+        src={iconSrc}
+        alt={title}
+        width={50}
+        className="rounded-md max-sm:hidden"
+      />
       <div className="flex flex-col gap-3 w-full h-full justify-around">
-        <h2 className="font-bold tracking-wider text-xl">{title}</h2>
+        <div className="flex gap-4 items-center">
+          <Image src={iconSrc} alt={title} width={35} className="sm:hidden" />
+          <h2 className="font-bold tracking-wider text-xl">{title}</h2>
+        </div>
 
-        <p className="w-[95%] opacity-80 overflow-y-auto tracking-wide text-sm max-md:">
+        <p className="w-[97%] opacity-80 overflow-y-auto tracking-wide text-sm max-md:">
           {description}
         </p>
 

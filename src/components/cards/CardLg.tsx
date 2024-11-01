@@ -47,8 +47,8 @@ export const CardLg = (props: CardType) => {
           <h2 className="font-medium text-lg text-zinc-600">{subTitle}</h2>
         )}
 
-        <div className={`flex justify-between w-11/12`}>
-          <p className="w-[95%] max-h-24 overflow-y-auto opacity-80 tracking-wide text-sm max-md:w-full">
+        <div className={`flex justify-between w-[95%]`}>
+          <p className="w-full max-h-24 overflow-y-auto opacity-80 tracking-wide text-sm max-md:w-full">
             {description}
           </p>
         </div>

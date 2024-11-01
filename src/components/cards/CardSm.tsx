@@ -28,7 +28,7 @@ export const CardSm = (props: CardType) => {
           <h2 className="font-bold tracking-wider text-xl">{title}</h2>
         </div>
 
-        <p className="w-[97%] opacity-80 overflow-y-auto tracking-wide text-sm max-md:">
+        <p className="w-[97%] opacity-80 overflow-y-auto tracking-wide text-md">
           {description}
         </p>
 

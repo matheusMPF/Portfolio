@@ -25,7 +25,7 @@ export const DataExperience: CardType[] = [
     title: "FCx Labs",
     subTitle: "Associate Sofware Engineer",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, minus illo perferendis cum sequi magni odio id nostrum reprehenderit harum? Voluptate, velit. Odit eum architecto qui? Minus vitae autem vero. ",
+      "Como Associate Software Engineer, colaboro no desenvolvimento e aprimoramento de software, codificando, corrigindo bugs e garantindo a eficiência das soluções. Trabalho junto à equipe para entregar funcionalidades de qualidade e melhorar minhas habilidades técnicas.",
     period: "05/11/2024 - Atualmente",
   },
 ];

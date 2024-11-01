@@ -30,7 +30,7 @@ export const HomePage = () => {
               className="rounded-md sm:hidden"
             />
           </div>
-          <p className="w-full opacity-80 text-sm max-sm:text-center">
+          <p className="w-full opacity-80 text-md max-sm:text-center">
             Graduado em Análise e desenvolvimento de sistemas. Sou apaixonado
             por criar soluções tecnológicas que resolvem problemas reais e que
             agregam valor aos usuários.

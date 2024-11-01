@@ -48,7 +48,7 @@ export const CardLg = (props: CardType) => {
         )}
 
         <div className={`flex justify-between w-[95%]`}>
-          <p className="w-full max-h-24 overflow-y-auto opacity-80 tracking-wide text-sm max-md:w-full">
+          <p className="w-full max-h-24 overflow-y-auto opacity-80 tracking-wide text-md max-md:w-full">
             {description}
           </p>
         </div>

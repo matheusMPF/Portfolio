@@ -3,7 +3,7 @@ import { DataExperience } from "@/data/DataExperience";
 
 DataExperience.reverse();
 
-export const Experience = () => {
+const Experience = () => {
   return (
     <section className="flex h-[90%] w-full justify-around items-center flex-wrap overflow-y-auto">
       {DataExperience.map((data, key) => {
@@ -21,3 +21,5 @@ export const Experience = () => {
     </section>
   );
 };
+
+export default Experience;

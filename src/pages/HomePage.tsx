@@ -6,7 +6,7 @@ import { Footer } from "@/components/Footer/Footer";
 
 const linkedin = "https://www.linkedin.com/in/matheus-magalhães-311560277/";
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <section className="min-h-[88%] flex flex-col">
       <div className="flex-grow w-full flex justify-around items-center">
@@ -62,3 +62,5 @@ export const HomePage = () => {
     </section>
   );
 };
+
+export default HomePage;

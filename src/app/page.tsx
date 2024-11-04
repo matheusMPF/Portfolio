@@ -1,10 +1,10 @@
 "use client";
 
 import { Navbar } from "@/components/Navbar";
-import { Experience } from "@/pages/Experience";
-import { HomePage } from "@/pages/HomePage";
-import { Projects } from "@/pages/Projects";
-import { Skills } from "@/pages/Skills";
+import Experience from "@/pages/Experience";
+import HomePage from "@/pages/HomePage";
+import Projects from "@/pages/Projects";
+import Skills from "@/pages/Skills";
 
 import { useState } from "react";
 

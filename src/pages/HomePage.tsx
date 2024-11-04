@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Myimg from "@/imgs/my-photo.jpeg";
+import Myimg from "@/imgs/my-photo.png";
 import { Button } from "@/components/Button";
 import { Book } from "iconsax-react";
 import { Footer } from "@/components/Footer/Footer";

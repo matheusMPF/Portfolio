@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Settings } from "./Setting";
+// import { Settings } from "./Setting";
 import { HambergerMenu } from "iconsax-react";
 
 interface PropsNavbar {
@@ -15,6 +15,12 @@ export const Navbar = ({ setPage }: PropsNavbar) => {
   ];
 
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [activeLink, setActiveLink] = useState<number | null>(null);
+
+  const handleLinkClick = (key: number) => {
+    setActiveLink(key);
+    setPage(key);
+  };
 
   return (
     <div>
@@ -26,14 +32,26 @@ export const Navbar = ({ setPage }: PropsNavbar) => {
           {navLinks.map((link, key) => (
             <li
               key={key}
-              className="relative list-none py-2 px-1 transition-colors duration-300 hover:text-purple-700 cursor-pointer group"
-              onClick={() => setPage(key)}
+              className={`relative list-none py-2 px-1 transition-colors duration-300 cursor-pointer group
+                ${
+                  activeLink === key
+                    ? "text-purple-700"
+                    : "hover:text-purple-700"
+                }`}
+              onClick={() => handleLinkClick(key)}
             >
               <span>{link}</span>
-              <span className="absolute left-0 -bottom-[15%] h-px w-0 bg-purple-700 transition-all duration-500 ease-in-out group-hover:w-full group-hover:shadow-[0_0_2px_#7e22ce,0_0_10px_#7e22ce,0_0_30px_#7e22ce]"></span>
+              <span
+                className={`absolute left-0 -bottom-[15%] h-px w-0 bg-purple-700 transition-all duration-500 ease-in-out
+                  ${
+                    activeLink === key
+                      ? "w-full shadow-[0_0_2px_#7e22ce,0_0_10px_#7e22ce,0_0_30px_#7e22ce]"
+                      : "group-hover:w-full group-hover:shadow-[0_0_2px_#7e22ce,0_0_10px_#7e22ce,0_0_30px_#7e22ce]"
+                  }`}
+              ></span>
             </li>
           ))}
-          <Settings isMenuHamburger={false} />
+          {/* <Settings isMenuHamburger={false} /> */}
         </ul>
 
         {/* Menu Hamburger para telas menores */}
@@ -51,18 +69,21 @@ export const Navbar = ({ setPage }: PropsNavbar) => {
           {navLinks.map((link, key) => (
             <li
               key={key}
-              className="relative w-full text-center list-none py-3 px-1 transition-colors duration-300 hover:bg-purple-200 cursor-pointer group"
+              className={`relative w-full text-center list-none py-3 px-1 transition-colors duration-300 cursor-pointer group
+                ${
+                  activeLink === key ? "bg-purple-200" : "hover:bg-purple-200"
+                }`}
               onClick={() => {
-                setPage(key);
+                handleLinkClick(key);
                 setShowMenu(false);
               }}
             >
               <span>{link}</span>
             </li>
           ))}
-          <li className="relative w-full text-center list-none py-3 px-1 transition-colors duration-300 hover:bg-purple-200 cursor-pointer group">
+          {/* <li className="relative w-full text-center list-none py-3 px-1 transition-colors duration-300 hover:bg-purple-200 cursor-pointer group">
             <Settings isMenuHamburger={true} />
-          </li>
+          </li> */}
         </ul>
       )}
     </div>

@@ -31,9 +31,12 @@ export const HomePage = () => {
             />
           </div>
           <p className="w-full opacity-80 text-md max-sm:text-center">
-            Graduado em Análise e desenvolvimento de sistemas. Sou apaixonado
-            por criar soluções tecnológicas que resolvem problemas reais e que
-            agregam valor aos usuários.
+            Sou graduado em Análise e Desenvolvimento de Sistemas e atuo com
+            foco em desenvolvimento full-stack, utilizando tecnologias como
+            React, Node.js, TypeScript e Next.js. Sou apaixonado por criar
+            soluções tecnológicas que agregam valor e resolvem problemas reais,
+            sempre buscando excelência técnica e impacto positivo na experiência
+            dos usuários.
           </p>
           <div>
             <a href={linkedin} target="_blank">

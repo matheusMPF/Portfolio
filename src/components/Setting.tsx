@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { Setting2 } from "iconsax-react";
 import Box from "@mui/material/Box";
@@ -8,7 +6,6 @@ import Modal from "@mui/material/Modal";
 import {
   FormControl,
   FormControlLabel,
-  // FormLabel,
   Radio,
   RadioGroup,
 } from "@mui/material";
@@ -34,10 +31,16 @@ interface PropsSettings {
 export const Settings = (props: PropsSettings) => {
   const { isMenuHamburger } = props;
   const [open, setOpen] = React.useState(false);
+  const [theme, setTheme] = React.useState<number>(0);
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  console.log(isMenuHamburger);
+  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedTheme = parseInt(event.target.value);
+    setTheme(selectedTheme);
+    console.log(selectedTheme);
+  };
 
   return (
     <div>
@@ -73,12 +76,11 @@ export const Settings = (props: PropsSettings) => {
             <RadioGroup
               aria-labelledby="demo-controlled-radio-buttons-group"
               name="controlled-radio-buttons-group"
-              defaultValue="light"
-              // value={value}
-              // onChange={handleChange}
+              value={theme}
+              onChange={handleThemeChange}
             >
               <FormControlLabel
-                value="light"
+                value={0}
                 control={
                   <Radio
                     sx={{
@@ -92,8 +94,7 @@ export const Settings = (props: PropsSettings) => {
                 label="Light"
               />
               <FormControlLabel
-                value="dark"
-                color="default"
+                value={1}
                 control={
                   <Radio
                     sx={{
